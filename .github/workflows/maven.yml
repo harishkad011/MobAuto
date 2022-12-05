@@ -25,9 +25,10 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin'
+        distribution: 'adopt'
+        architecture: x64
         cache: maven
-    - name: Build with maven
+    - name: Run the Maven verify phase
       run: mvn test -Dtest=Login
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
