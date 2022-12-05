@@ -40,9 +40,5 @@ jobs:
         arch: x86_64
         profile: Nexus 6
         script: mvn clean test -Pandroid
-        java-version: '11'
-        distribution: 'adopt'
-        architecture: x64
-        cache: maven
     #- name: Run the Maven verify phase
     #  run: mvn test -Dtest=KapivaAppUserWorkflow_PayOnline
