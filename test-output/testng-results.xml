@@ -1,125 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-11T16:08:13 IST" name="Suite" finished-at="2022-11-11T16:11:52 IST" duration-ms="219084">
+  <suite started-at="2022-12-05T11:04:15 IST" name="Default suite" finished-at="2022-12-05T11:05:42 IST" duration-ms="87327">
     <groups>
     </groups>
-    <test started-at="2022-11-11T16:08:13 IST" name="Test" finished-at="2022-11-11T16:11:52 IST" duration-ms="219084">
-      <class name="features.Checkout">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:features.Checkout@52719fb6]" started-at="2022-11-11T16:09:58 IST" name="SetUp" finished-at="2022-11-11T16:10:11 IST" duration-ms="12737" status="PASS">
+    <test started-at="2022-12-05T11:04:15 IST" name="Default test" finished-at="2022-12-05T11:05:42 IST" duration-ms="87327">
+      <class name="AppWorkflows.KapivaAppUserWorkflow_PayOnline">
+        <test-method is-config="true" signature="Config()[pri:0, instance:AppWorkflows.KapivaAppUserWorkflow_PayOnline@38cee291]" started-at="2022-12-05T11:04:15 IST" name="Config" finished-at="2022-12-05T11:04:39 IST" duration-ms="23884" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method signature="CheckoutTest()[pri:0, instance:features.Checkout@52719fb6]" started-at="2022-11-11T16:10:11 IST" name="CheckoutTest" finished-at="2022-11-11T16:10:58 IST" duration-ms="46670" status="PASS">
+        </test-method> <!-- Config -->
+        <test-method signature="UserWokflow_PayOnline()[pri:0, instance:AppWorkflows.KapivaAppUserWorkflow_PayOnline@38cee291]" started-at="2022-12-05T11:04:39 IST" name="UserWokflow_PayOnline" finished-at="2022-12-05T11:05:40 IST" duration-ms="61727" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:features.Checkout@52719fb6]" started-at="2022-11-11T16:10:58 IST" name="tearDown" finished-at="2022-11-11T16:10:59 IST" duration-ms="695" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- features.Checkout -->
-      <class name="features.Logout">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:features.Logout@2e6a8155]" started-at="2022-11-11T16:08:50 IST" name="SetUp" finished-at="2022-11-11T16:09:03 IST" duration-ms="12964" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method signature="LogoutTest()[pri:0, instance:features.Logout@2e6a8155]" started-at="2022-11-11T16:09:03 IST" name="LogoutTest" finished-at="2022-11-11T16:09:29 IST" duration-ms="25521" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Logou successful] but found [Logout successful]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Logou successful] but found [Logout successful]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at features.Logout.LogoutTest(Logout.java:34)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:features.Logout@2e6a8155]" started-at="2022-11-11T16:09:29 IST" name="tearDown" finished-at="2022-11-11T16:09:29 IST" duration-ms="635" status="PASS">
+        </test-method> <!-- UserWokflow_PayOnline -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AppWorkflows.KapivaAppUserWorkflow_PayOnline@38cee291]" started-at="2022-12-05T11:05:40 IST" name="tearDown" finished-at="2022-12-05T11:05:42 IST" duration-ms="1609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- features.Logout -->
-      <class name="features.Login">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:features.Login@5e600dd5]" started-at="2022-11-11T16:08:13 IST" name="SetUp" finished-at="2022-11-11T16:08:27 IST" duration-ms="13704" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method signature="ValidTest()[pri:0, instance:features.Login@5e600dd5]" started-at="2022-11-11T16:08:27 IST" name="ValidTest" finished-at="2022-11-11T16:08:50 IST" duration-ms="22363" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:features.Login@5e600dd5]" started-at="2022-11-11T16:08:50 IST" name="tearDown" finished-at="2022-11-11T16:08:50 IST" duration-ms="602" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- features.Login -->
-      <class name="features.ContactForm">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:features.ContactForm@3012646b]" started-at="2022-11-11T16:10:59 IST" name="SetUp" finished-at="2022-11-11T16:11:12 IST" duration-ms="13070" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method signature="ContactFormTest()[pri:0, instance:features.ContactForm@3012646b]" started-at="2022-11-11T16:11:12 IST" name="ContactFormTest" finished-at="2022-11-11T16:11:52 IST" duration-ms="40298" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ContactFormTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:features.ContactForm@3012646b]" started-at="2022-11-11T16:11:52 IST" name="tearDown" finished-at="2022-11-11T16:11:52 IST" duration-ms="588" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- features.ContactForm -->
-      <class name="features.TrackOrder">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:features.TrackOrder@6221a451]" started-at="2022-11-11T16:09:29 IST" name="SetUp" finished-at="2022-11-11T16:09:43 IST" duration-ms="13948" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method signature="TrackOrderTest()[pri:0, instance:features.TrackOrder@6221a451]" started-at="2022-11-11T16:09:43 IST" name="TrackOrderTest" finished-at="2022-11-11T16:09:58 IST" duration-ms="14459" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TrackOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:features.TrackOrder@6221a451]" started-at="2022-11-11T16:09:58 IST" name="tearDown" finished-at="2022-11-11T16:09:58 IST" duration-ms="693" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- features.TrackOrder -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- AppWorkflows.KapivaAppUserWorkflow_PayOnline -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,9 +1,11 @@
 package features;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
+import resources.BaseTest;
+
 public class TrackOrder extends BaseTest {
 	@Test
 	public void TrackOrderTest() {
@@ -16,13 +18,17 @@ public class TrackOrder extends BaseTest {
          driver.hideKeyboard();
          driver.findElement(AppiumBy.accessibilityId("Track")).click();
          
-         String el=driver.findElement(AppiumBy.xpath("//android.view.View[@index='4']")).getAttribute("content-desc");
+         String  el=driver.findElement(AppiumBy.accessibilityId("Order details not found. Kindly enter the correct order ID or wait for 48 hours for tracking details.")).getAttribute("content-desc");
 
-         if(el.contains("Order details not found"))
-         {
-        	 System.out.println("TestPass");
+         
+         boolean text = false;
+         if(el.contains("Order details not found")){
+        	 text=true;
+        	 Assert.assertEquals(text, true);
+        	System.out.println("TrackOrder pass");
          }else {
-        	 System.out.println("TestFail");
+        	 Assert.assertEquals(text, true);
+        	 System.out.println("TrackOrder fail");
          }
    }
 }

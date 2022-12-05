@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+<listeners>
+  <listener class-name="resources.ScreenshotUtility"/>
+</listeners>
+  <test name="Test">
     <classes>
-      <class name="features.Login"/>
-      <class name="features.Logout"/>
-      <class name="features.TrackOrder"/>
-      <class name="features.TrackOrder"/>
-      <class name="features.Checkout"/>
-      <class name="features.ContactForm"/>
-    </classes>
+      <class name ="AppWorkflows.KapivaAppUserWorkflow_PayOnline"/>
+     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

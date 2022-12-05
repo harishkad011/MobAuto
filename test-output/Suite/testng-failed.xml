@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="features.Logout">
+      <class name="features.Checkout">
         <methods>
           <include name="SetUp"/>
+          <include name="CheckoutTest"/>
           <include name="tearDown"/>
-          <include name="LogoutTest"/>
         </methods>
-      </class> <!-- features.Logout -->
+      </class> <!-- features.Checkout -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

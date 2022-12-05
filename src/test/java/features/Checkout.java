@@ -5,8 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
+import resources.BaseTest;
 
 public class Checkout extends BaseTest {
 	
@@ -54,16 +56,18 @@ public class Checkout extends BaseTest {
     	swipe2.addAction(finger2.createPointerDown(0));
     	swipe2.addAction(finger2.createPointerMove(Duration.ofMillis(400), PointerInput.Origin.viewport(), center_x1, (int)end_y1));
     	swipe2.addAction(finger2.createPointerUp(0));
-   	   driver.perform(Arrays.asList(swipe2));
-     	Thread.sleep(5000);
+   	    driver.perform(Arrays.asList(swipe2));
+     	Thread.sleep(3000);
     	
  	    driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc='Pay ₹1298.00']")).click();
- 	    Thread.sleep(5000);
+ 	    Thread.sleep(3000);
  	    
      String paymentpage=driver.findElement(AppiumBy.xpath("//android.widget.TextView[@index=1]")).getAttribute("text");
+     
+      Assert.assertEquals("Payment Methods", paymentpage);
      if(paymentpage.contains("Payment Methods")) {
-    	 System.out.println("Test Pass");
+    	 System.out.println("Checkout test pass");
      }else{
-    	 System.out.println("Test fail");
+    	 System.out.println("Checkout test fail");
      }
 }}

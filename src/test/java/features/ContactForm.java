@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
+import resources.BaseTest;
 
 public class ContactForm extends BaseTest {
 	
@@ -40,4 +41,9 @@ public class ContactForm extends BaseTest {
     String msgtext=driver.findElement(AppiumBy.accessibilityId("Message Received")).getAttribute("content-desc");
     
     Assert.assertEquals(msgtext,"Message Received");
+    if(msgtext.contains("Message Received")) {
+   	 System.out.println("Contactform test pass");
+    }else{
+   	 System.out.println("Contactform test fail");
+    }
 }}

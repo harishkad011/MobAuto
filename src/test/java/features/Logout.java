@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
+import resources.BaseTest;
 
 public class Logout extends BaseTest {
 	
@@ -30,8 +31,8 @@ public class Logout extends BaseTest {
 		    driver.findElement(AppiumBy.accessibilityId("Ok")).click();
 		
 		String logouttext = driver.findElement(AppiumBy.accessibilityId("Logout successful")).getAttribute("content-desc");
-		//System.out.println(logouttext);
-        Assert.assertEquals(logouttext, "Logout successful");
+		
+        Assert.assertEquals("Logout successful",logouttext );
        
        if(logouttext.equalsIgnoreCase("Logout successful")){
        	System.out.println("Logged out Successfully");
