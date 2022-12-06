@@ -32,13 +32,14 @@ public class BaseTest {
 	cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 	cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
 	cap.setCapability(MobileCapabilityType.UDID, "72c414f1");
+	cap.setCapability("autoGrantPermissions", true);
 	cap.setCapability("appPackage","com.kapiva.app");
 	cap.setCapability("appActivity","com.kapiva.app.MainActivity");
 	URL url = new URL("http://127.0.0.1:4723/wd/hub");
     driver=new AndroidDriver(url,cap);
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	//System.out.println("App started in the Real device");
-	driver.findElements(AppiumBy.className("android.widget.Button")).get(2).click();
+	//driver.findElements(AppiumBy.className("android.widget.Button")).get(2).click();
 	
 	}	
 @AfterClass 

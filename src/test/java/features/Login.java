@@ -20,7 +20,6 @@ public class Login extends Em_BaseTest{
 		
 	    //driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
 		 driver.findElement(AppiumBy.accessibilityId("Profile")).click();
-	    Thread.sleep(3000);
 		//driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc='Login/Register']")).click();
 		//log.click();
 		
