@@ -9,11 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        api-level: [25]  
-        target: [default]
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -26,14 +21,11 @@ jobs:
       with:
        node-version: '12'   
     - run: |
-            npm install -g appium@v1.20.2
+            npm install -g appium@v1.22
             appium -v
             appium &>/dev/null &   
     - name: Run Appium Tests
       uses: reactivecircus/android-emulator-runner@v1
       with:
-        api-level: ${{ matrix.api-level }}
-        target: ${{ matrix.target }}
-        arch: x86_64
-        profile: Pixel
+        api-level: 29
         script: mvn clean test -Pandroid
