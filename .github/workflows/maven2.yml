@@ -35,4 +35,4 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: mvn clean -Dtest=Login.java
+        script: mvn test -Dtest=Login.java
