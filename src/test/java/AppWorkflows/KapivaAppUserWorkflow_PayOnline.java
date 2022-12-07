@@ -17,7 +17,9 @@ import resources.SlackTest;
 
 
 public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
+	
 		SlackTest slack=new SlackTest();
+		
 		@Test
 		public void UserWokflow_PayOnline() throws InterruptedException, IOException {
 				 
