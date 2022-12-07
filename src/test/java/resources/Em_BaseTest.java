@@ -20,14 +20,14 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class Em_BaseTest {
 
 public AndroidDriver driver;
-//public AppiumDriverLocalService service;
+public AppiumDriverLocalService service;
 
 @BeforeClass
 public void Config() throws MalformedURLException, InterruptedException {
 
-//	service =new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\"
-//			+ "node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").usingPort(4723).build();
-//	service.start();
+	service =new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\"
+			+ "node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").usingPort(4723).build();
+	service.start();
 	 
 	UiAutomator2Options options=new UiAutomator2Options();
 	
@@ -61,6 +61,6 @@ public void Config() throws MalformedURLException, InterruptedException {
 public void tearDown(){
 
 	driver.quit();
-//	service.stop();
+	service.stop();
   }		
 }
