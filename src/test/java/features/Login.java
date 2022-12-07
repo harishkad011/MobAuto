@@ -14,10 +14,10 @@ import resources.BaseTest;
 import resources.Em_BaseTest;
 
 public class Login extends Em_BaseTest{
-	
+	SlackTest slack=new SlackTest();
 	@Test
 	public void LoginTest() throws MalformedURLException, InterruptedException {
-		
+		SlackTest.Sendmessage("*******Kat*******");
 	    //driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
 		 driver.findElement(AppiumBy.accessibilityId("Profile")).click();
 		//driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc='Login/Register']")).click();
