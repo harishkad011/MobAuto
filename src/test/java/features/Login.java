@@ -21,7 +21,7 @@ public class Login extends Em_BaseTest{
 	public void LoginTest() throws InterruptedException, IOException {
 		
 		SlackTest.Sendmessage("*******Kat*******");
-		
+
 	    //driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
 		 driver.findElement(AppiumBy.accessibilityId("Profile")).click();
 		//driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc='Login/Register']")).click();
