@@ -1,5 +1,6 @@
 package features;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -12,11 +13,14 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import resources.BaseTest;
 import resources.Em_BaseTest;
+import resources.SlackTest;
 
 public class Login extends Em_BaseTest{
-	
+	SlackTest slack=new SlackTest();
 	@Test
-	public void LoginTest() throws MalformedURLException, InterruptedException {
+	public void LoginTest() throws InterruptedException, IOException {
+		
+		SlackTest.Sendmessage("*******Kat*******");
 		
 	    //driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
 		 driver.findElement(AppiumBy.accessibilityId("Profile")).click();
