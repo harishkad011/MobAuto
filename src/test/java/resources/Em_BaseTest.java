@@ -34,11 +34,11 @@ public class Em_BaseTest {
 //			
 //			service.start();
 
-		service = new AppiumServiceBuilder()
-				.withAppiumJS(new File(
-						"C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withIPAddress("127.0.0.1").usingPort(4723).build();
-		service.start();
+//		service = new AppiumServiceBuilder()
+//				.withAppiumJS(new File(
+//						"C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+//				.withIPAddress("127.0.0.1").usingPort(4723).build();
+//		service.start();
 
 		UiAutomator2Options options = new UiAutomator2Options();
 		
@@ -76,6 +76,6 @@ public class Em_BaseTest {
 	public void tearDown() {
 
 		driver.quit();
-		service.stop();
+//		service.stop();
 	}
 }
