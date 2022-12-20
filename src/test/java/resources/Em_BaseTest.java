@@ -20,7 +20,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class Em_BaseTest {
 
 	public AndroidDriver driver;
-//	public AppiumDriverLocalService service;
+	public AppiumDriverLocalService service;
 
 	@BeforeClass
 	public void Config() throws MalformedURLException, InterruptedException {
@@ -34,18 +34,22 @@ public class Em_BaseTest {
 //			
 //			service.start();
 
-//		service = new AppiumServiceBuilder()
-//				.withAppiumJS(new File(
-//						"C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\" + "node_modules\\appium\\build\\lib\\main.js"))
-//				.withIPAddress("127.0.0.1").usingPort(4723).build();
-//		service.start();
+		service = new AppiumServiceBuilder()
+				.withAppiumJS(new File(
+						"C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				.withIPAddress("127.0.0.1").usingPort(4723).build();
+		service.start();
 
 		UiAutomator2Options options = new UiAutomator2Options();
-
-		options.setDeviceName("Pixel");
+		
+	    //DesiredCapabilities cap=new DesiredCapabilities();
+	    
+		options.setDeviceName("Pixel"); 
+		//options.setCapability("automationName", "UiAutomator2");
+		//setDeviceName("Pixel");
 		// options.setCapability(MobileCapabilityType.UDID, "emulator-5555");
 		options.setCapability("autoGrantPermissions", true);
-		options.setCapability(MobileCapabilityType.APP, "./resources/app-release.apk");
+		options.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/App/app-release.apk");
 		URL url = new URL("http://127.0.0.1:4723");
 		driver = new AndroidDriver(url, options);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -72,6 +76,6 @@ public class Em_BaseTest {
 	public void tearDown() {
 
 		driver.quit();
-//		service.stop();
+		service.stop();
 	}
 }

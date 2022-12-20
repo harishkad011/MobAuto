@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 20 12:51:32 IST 2022</td>
+<td>Started on:</td><td>Tue Dec 20 15:14:31 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>88 seconds (88023 ms)</td>
+<tr><td>Total time:</td><td>100 seconds (100825 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='AppWorkflows.KapivaAppUserWorkflow_PayOnline.UserWokflow_PayOnline()'><b>UserWokflow_PayOnline</b><br>Test class: AppWorkflows.KapivaAppUserWorkflow_PayOnline</td>
+<td title='features.Login.LoginTest()'><b>LoginTest</b><br>Test class: features.Login</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c, findElement {using=accessibility id, value=Pay ₹1309.00}]
-Capabilities {appium:appActivity: com.kapiva.app.MainActivity, appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: Appium, appium:databaseEnabled: false, appium:desired: {appActivity: com.kapiva.app.MainActivity, appPackage: com.kapiva.app, autoGrantPermissions: true, automationName: Appium, deviceName: Galaxy], platformName: android, platformVersion: 11, udid: 72c414f1}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 220333QBI, appium:deviceName: 72c414f1, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1650, appium:deviceUDID: 72c414f1, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 12, appium:statBarHeight: 49, appium:takesScreenshot: true, appium:udid: 72c414f1, appium:viewportRect: {height: 1458, left: 0, top: 49, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
+Command: [ea14d960-eb04-4d2d-882a-a336cc2d2ceb, findElement {using=accessibility id, value=Profile}]
+Capabilities {appium:app: D:\Automation\KapivaMobileA..., appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: D:\Automation\KapivaMobileA..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: Pixel, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ea14d960-eb04-4d2d-882a-a336cc2d2ceb
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -100,7 +100,7 @@ Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at AppWorkflows.KapivaAppUserWorkflow_PayOnline.UserWokflow_PayOnline(KapivaAppUserWorkflow_PayOnline.java:99)
+	at features.Login.LoginTest(Login.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,15 +129,15 @@ Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1947397483", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1947397483'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1218496682", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1218496682'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c, findElement {using=accessibility id, value=Pay ₹1309.00}]
-Capabilities {appium:appActivity: com.kapiva.app.MainActivity, appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: Appium, appium:databaseEnabled: false, appium:desired: {appActivity: com.kapiva.app.MainActivity, appPackage: com.kapiva.app, autoGrantPermissions: true, automationName: Appium, deviceName: Galaxy], platformName: android, platformVersion: 11, udid: 72c414f1}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 220333QBI, appium:deviceName: 72c414f1, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1650, appium:deviceUDID: 72c414f1, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 12, appium:statBarHeight: 49, appium:takesScreenshot: true, appium:udid: 72c414f1, appium:viewportRect: {height: 1458, left: 0, top: 49, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
+Command: [ea14d960-eb04-4d2d-882a-a336cc2d2ceb, findElement {using=accessibility id, value=Profile}]
+Capabilities {appium:app: D:\Automation\KapivaMobileA..., appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: D:\Automation\KapivaMobileA..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: Pixel, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ea14d960-eb04-4d2d-882a-a336cc2d2ceb
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -153,7 +153,7 @@ Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at AppWorkflows.KapivaAppUserWorkflow_PayOnline.UserWokflow_PayOnline(KapivaAppUserWorkflow_PayOnline.java:99)
+	at features.Login.LoginTest(Login.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -183,8 +183,8 @@ Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>61</td>
-<td>AppWorkflows.KapivaAppUserWorkflow_PayOnline@2034b64c</td></tr>
+<td>63</td>
+<td>features.Login@1cf6d1be</td></tr>
 </table><p>
 </body>
 </html>

@@ -9,18 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">88,023</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">100,825</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">AppWorkflows.KapivaAppUserWorkflow_PayOnline</td><td><a href="#m0">UserWokflow_PayOnline</a></td><td rowspan="1">1671520917930</td><td rowspan="1">61941</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">features.Login</td><td><a href="#m0">LoginTest</a></td><td rowspan="1">1671529507445</td><td rowspan="1">63277</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">AppWorkflows.KapivaAppUserWorkflow_PayOnline#UserWokflow_PayOnline</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+<h2>Default test</h2><h3 id="m0">features.Login#LoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c, findElement {using=accessibility id, value=Pay ₹1309.00}]
-Capabilities {appium:appActivity: com.kapiva.app.MainActivity, appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: Appium, appium:databaseEnabled: false, appium:desired: {appActivity: com.kapiva.app.MainActivity, appPackage: com.kapiva.app, autoGrantPermissions: true, automationName: Appium, deviceName: Galaxy], platformName: android, platformVersion: 11, udid: 72c414f1}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 220333QBI, appium:deviceName: 72c414f1, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1650, appium:deviceUDID: 72c414f1, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 12, appium:statBarHeight: 49, appium:takesScreenshot: true, appium:udid: 72c414f1, appium:viewportRect: {height: 1458, left: 0, top: 49, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
+Command: [ea14d960-eb04-4d2d-882a-a336cc2d2ceb, findElement {using=accessibility id, value=Profile}]
+Capabilities {appium:app: D:\Automation\KapivaMobileA..., appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: D:\Automation\KapivaMobileA..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: Pixel, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ea14d960-eb04-4d2d-882a-a336cc2d2ceb
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -36,7 +36,7 @@ Session ID: f175ca1d-4b0e-42af-b7c0-7c8239c7bf9c
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at AppWorkflows.KapivaAppUserWorkflow_PayOnline.UserWokflow_PayOnline(KapivaAppUserWorkflow_PayOnline.java:99)
+	at features.Login.LoginTest(Login.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
