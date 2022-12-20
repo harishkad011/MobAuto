@@ -84,18 +84,18 @@ public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
 	   	    driver.perform(Arrays.asList(swipe2));
             Thread.sleep(3000);
 	   	    
-		 	WebElement cupon=driver.findElement(AppiumBy.xpath("//android.view.View[@index='6']"));
-    	    String cuponcode= cupon.getAttribute("content-desc").replaceAll("Get extra 5% off on orders above ₹989", "");
-	   	    System.out.println(cuponcode);    
-            WebElement tb=driver.findElements(AppiumBy.className("android.widget.EditText")).get(0);
-            tb.click();
-            tb.sendKeys(cuponcode);
-            driver.findElement(AppiumBy.accessibilityId("Apply")).click();
-	        Thread.sleep(3000);
-	    
-	        System.out.println("ApplyCuponCodeTest_PASS");
-	        SlackTest.Sendmessage("ApplyCuponTest                             PASS");
-	     	
+//		 	WebElement cupon=driver.findElement(AppiumBy.xpath("//android.view.View[@index='6']"));
+//    	    String cuponcode= cupon.getAttribute("content-desc").replaceAll("Get extra 5% off on orders above ₹989", "");
+//	   	    System.out.println(cuponcode);    
+//            WebElement tb=driver.findElements(AppiumBy.className("android.widget.EditText")).get(0);
+//            tb.click();
+//            tb.sendKeys(cuponcode);
+//            driver.findElement(AppiumBy.accessibilityId("Apply")).click();
+//	        Thread.sleep(3000);
+//	    
+//	        System.out.println("ApplyCuponCodeTest_PASS");
+//	        SlackTest.Sendmessage("ApplyCuponTest                             PASS");
+//	     	
 	 	    WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹1309.00"));
 	 	    paybutton.click();
 	 	    Thread.sleep(4000);
