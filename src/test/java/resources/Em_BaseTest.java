@@ -49,7 +49,7 @@ public class Em_BaseTest {
 		//setDeviceName("Pixel");
 		// options.setCapability(MobileCapabilityType.UDID, "emulator-5555");
 		options.setCapability("autoGrantPermissions", true);
-		options.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/App/app-release.apk");
+		options.setCapability(MobileCapabilityType.APP,"./App/app-release.apk");
 		URL url = new URL("http://127.0.0.1:4723");
 		driver = new AndroidDriver(url, options);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
