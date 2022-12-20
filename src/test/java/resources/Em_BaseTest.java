@@ -24,8 +24,18 @@ public AppiumDriverLocalService service;
 
 @BeforeClass
 public void Config() throws MalformedURLException, InterruptedException {
+	
+	
+//	         service = AppiumDriverLocalService
+//			.buildService(new AppiumServiceBuilder()
+//		    .usingDriverExecutable(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\node"))
+//			.withAppiumJS(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\appium.js"))
+//			.usingPort(4723)
+//			.withIPAddress("127.0.0.1"));
+//			
+//			service.start();
 
-	service =new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\"
+	service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\"
 			+ "node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").usingPort(4723).build();
 	service.start();
 	 

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AppWorkflows.KapivaAppUserWorkflow_PayOnline">
+      <class name="features.Login">
         <methods>
           <include name="tearDown"/>
-          <include name="UserWokflow_PayOnline"/>
+          <include name="LoginTest"/>
           <include name="Config"/>
         </methods>
-      </class> <!-- AppWorkflows.KapivaAppUserWorkflow_PayOnline -->
+      </class> <!-- features.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
