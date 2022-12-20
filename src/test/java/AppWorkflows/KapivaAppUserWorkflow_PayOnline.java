@@ -16,7 +16,7 @@ import resources.Em_BaseTest;
 import resources.SlackTest;
 
 
-public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
+public class KapivaAppUserWorkflow_PayOnline extends BaseTest {
 	
 		SlackTest slack=new SlackTest();
 		

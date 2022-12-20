@@ -19,13 +19,12 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class Em_BaseTest {
 
-public AndroidDriver driver;
-public AppiumDriverLocalService service;
+	public AndroidDriver driver;
+//	public AppiumDriverLocalService service;
 
-@BeforeClass
-public void Config() throws MalformedURLException, InterruptedException {
-	
-	
+	@BeforeClass
+	public void Config() throws MalformedURLException, InterruptedException {
+
 //	         service = AppiumDriverLocalService
 //			.buildService(new AppiumServiceBuilder()
 //		    .usingDriverExecutable(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\node"))
@@ -35,21 +34,23 @@ public void Config() throws MalformedURLException, InterruptedException {
 //			
 //			service.start();
 
-	service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\"
-			+ "node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").usingPort(4723).build();
-	service.start();
-	 
-	UiAutomator2Options options=new UiAutomator2Options();
-	
-	options.setDeviceName("Pixel");
-	//options.setCapability(MobileCapabilityType.UDID, "emulator-5555");
-	options.setCapability("autoGrantPermissions", true);
-	options.setCapability(MobileCapabilityType.APP,"D:\\Automation\\KapivaMobileAutomation\\src\\test\\java\\resources\\app-release.apk");
-	URL url = new URL("http://127.0.0.1:4723");
-	driver=new AndroidDriver(url,options);
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	
-	
+//		service = new AppiumServiceBuilder()
+//				.withAppiumJS(new File(
+//						"C:\\Users\\shilpa hk\\AppData\\Roaming\\npm\\" + "node_modules\\appium\\build\\lib\\main.js"))
+//				.withIPAddress("127.0.0.1").usingPort(4723).build();
+//		service.start();
+
+		UiAutomator2Options options = new UiAutomator2Options();
+
+		options.setDeviceName("Pixel");
+		// options.setCapability(MobileCapabilityType.UDID, "emulator-5555");
+		options.setCapability("autoGrantPermissions", true);
+		options.setCapability(MobileCapabilityType.APP,
+				"D:\\Automation\\KapivaMobileAutomation\\src\\test\\java\\resources\\app-release.apk");
+		URL url = new URL("http://127.0.0.1:4723");
+		driver = new AndroidDriver(url, options);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 //DesiredCapabilities cap=new DesiredCapabilities();
 //cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 //cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
@@ -66,11 +67,12 @@ public void Config() throws MalformedURLException, InterruptedException {
 //System.out.println("App started in the Real device");
 //driver.findElements(AppiumBy.className("android.widget.Button")).get(1).click();
 
-}	
-@AfterClass 
-public void tearDown(){
+	}
 
-	driver.quit();
-	service.stop();
-  }		
+	@AfterClass
+	public void tearDown() {
+
+		driver.quit();
+//		service.stop();
+	}
 }
