@@ -17,14 +17,14 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <project.build.testSourceDirectory>src/test/java/features/Login.java</project.build.testSourceDirectory>
   </properties>
-  
   <dependencies>
+
 <dependency>
     <groupId>com.sample</groupId>
     <artifactId>sample</artifactId>
     <version>1.0</version>
     <scope>system</scope>
-    <systemPath>./lib/java-client-8.3.0.jar</systemPath>
+    <systemPath>${basedir}/lib/java-client-8.3.0.jar</systemPath>
 </dependency>
 
 <dependency>
