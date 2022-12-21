@@ -30,7 +30,7 @@ public class Login {
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 		
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
+		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
 		
 		cap.setCapability("uiautomater2ServerInstallTimeout", 20000);
 		cap.setCapability("autoGrantPermissions", true);
