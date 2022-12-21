@@ -30,10 +30,11 @@ public class Login {
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 		
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
 		
 		cap.setCapability("uiautomater2ServerInstallTimeout", 20000);
 		cap.setCapability("autoGrantPermissions", true);
-		cap.setCapability(MobileCapabilityType.APP, "./App/app-release.apk");
+		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
 		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
