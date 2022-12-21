@@ -1,4 +1,4 @@
-package features;
+
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -16,12 +16,9 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import lombok.SneakyThrows;
-import resources.BaseTest;
-import resources.Em_BaseTest;
-import resources.SlackTest;
 
 public class Login {
-	SlackTest slack=new SlackTest();
+	//SlackTest slack=new SlackTest();
 	
 	@SneakyThrows
 	@Test
@@ -40,7 +37,7 @@ public class Login {
 		
 //		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 //		driver=new AndroidDriver(url,cap);
-		SlackTest.Sendmessage("*******Kat*******");
+		//SlackTest.Sendmessage("*******Kat*******");
 
 	    //driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
 		 driver.findElement(AppiumBy.accessibilityId("Profile")).click();
