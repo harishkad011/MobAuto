@@ -1,3 +1,4 @@
+package Tests;
 
 
 import java.io.IOException;
@@ -30,10 +31,11 @@ public class Login {
 		
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
 		
-		cap.setCapability("uiautomater2ServerInstallTimeout", 80000);
+		cap.setCapability("uiautomater2ServerInstallTimeout", 20000);
 		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(MobileCapabilityType.APP, "./App/app-release.apk");
 		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 //		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 //		driver=new AndroidDriver(url,cap);
