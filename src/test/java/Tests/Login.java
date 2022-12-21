@@ -31,8 +31,11 @@ public class Login {
 		
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
 		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
-		
-		cap.setCapability("uiautomater2ServerInstallTimeout", 20000);
+		//cap.setCapability(MobileCapabilityType.UDID, "72c414f1");
+		cap.setCapability("adbExecTimeout", 50000);
+		cap.setCapability("appWaitforLaunch", false);
+		cap.setCapability("appWaitDuration", 30000);
+		cap.setCapability("uiautomater2ServerInstallTimeout", 60000);
 		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
 		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
