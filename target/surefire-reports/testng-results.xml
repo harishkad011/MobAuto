@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="75668" started-at="2022-12-21T16:38:40 IST" finished-at="2022-12-21T16:39:56 IST">
+  <suite name="Surefire suite" duration-ms="112413" started-at="2022-12-21T17:23:47 IST" finished-at="2022-12-21T17:25:39 IST">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="75668" started-at="2022-12-21T16:38:40 IST" finished-at="2022-12-21T16:39:56 IST">
+    <test name="Surefire test" duration-ms="112413" started-at="2022-12-21T17:23:47 IST" finished-at="2022-12-21T17:25:39 IST">
       <class name="Tests.Login">
-        <test-method status="FAIL" signature="LoginTest()[pri:0, instance:Tests.Login@33c7e1bb]" name="LoginTest" duration-ms="75598" started-at="2022-12-21T16:38:40 IST" finished-at="2022-12-21T16:39:56 IST">
+        <test-method status="FAIL" signature="LoginTest()[pri:0, instance:Tests.Login@33c7e1bb]" name="LoginTest" duration-ms="112278" started-at="2022-12-21T17:23:47 IST" finished-at="2022-12-21T17:25:39 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters.
@@ -15,9 +15,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.7.0', revision: '0a5b49d16f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [24c8fc01-b74e-46f0-88f0-01a674458216, findElement {using=accessibility id, value=Profile}]
+Command: [d78eb2e2-7584-4458-9eba-85606aec14bb, findElement {using=accessibility id, value=Profile}]
 Capabilities {appium:app: D:\Automation\KapivaMobileA..., appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: D:\Automation\KapivaMobileA..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Pixel, platformName: android, uiautomater2ServerInstallTimeout: 20000}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:uiautomater2ServerInstallTimeout: 20000, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 24c8fc01-b74e-46f0-88f0-01a674458216]]>
+Session ID: d78eb2e2-7584-4458-9eba-85606aec14bb]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
@@ -25,9 +25,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.7.0', revision: '0a5b49d16f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [24c8fc01-b74e-46f0-88f0-01a674458216, findElement {using=accessibility id, value=Profile}]
+Command: [d78eb2e2-7584-4458-9eba-85606aec14bb, findElement {using=accessibility id, value=Profile}]
 Capabilities {appium:app: D:\Automation\KapivaMobileA..., appium:appPackage: com.kapiva.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: D:\Automation\KapivaMobileA..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Pixel, platformName: android, uiautomater2ServerInstallTimeout: 20000}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:uiautomater2ServerInstallTimeout: 20000, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 24c8fc01-b74e-46f0-88f0-01a674458216
+Session ID: d78eb2e2-7584-4458-9eba-85606aec14bb
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
