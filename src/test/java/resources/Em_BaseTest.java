@@ -26,7 +26,7 @@ public class Em_BaseTest {
 		
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
 		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
-		//cap.setCapability(MobileCapabilityType.UDID, "72c414f1");
+		cap.setCapability(MobileCapabilityType.UDID, "72c414f1");
 		cap.setCapability("adbExecTimeout", 50000);
 		cap.setCapability("appWaitforLaunch", false);
 		cap.setCapability("appWaitDuration", 30000);
@@ -34,7 +34,7 @@ public class Em_BaseTest {
 		cap.setCapability("ignoreHiddenApiPolicyError", true);
 		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
-		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 
@@ -61,7 +61,10 @@ public class Em_BaseTest {
 //		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
 //		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-	
 	}
-}
+		@AfterClass
+		public void tearDown(){
+			driver.quit();
+	}
+}		
+

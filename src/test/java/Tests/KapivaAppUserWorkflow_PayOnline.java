@@ -15,6 +15,7 @@ import resources.Em_BaseTest;
 import resources.SlackTest;
 
 
+
 public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
 	
 		SlackTest slack=new SlackTest();
@@ -35,9 +36,9 @@ public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
 		    WebElement password =driver.findElement(By.xpath("//android.widget.ImageView[@index='2']"));
 		    password.click();
 		    password.sendKeys("Kapiva@123"); 	
-	        driver.hideKeyboard();
-	        driver.findElement(By.xpath("//android.widget.Button[@content-desc='Login']")).click();
-	        driver.findElement(AppiumBy.accessibilityId("Profile")).click();
+		    driver.hideKeyboard();
+		    driver.findElement(By.xpath("//android.widget.Button[@content-desc='Login']")).click();
+		    driver.findElement(AppiumBy.accessibilityId("Profile")).click();
 	        String logintext = driver.findElement(AppiumBy.accessibilityId("Harish QA")).getAttribute("content-desc");
 	        if(logintext.equalsIgnoreCase("Harish QA")){
 	        	System.out.println("LoginTest_PASS");
@@ -46,7 +47,7 @@ public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
 	     
 	        }else {
 	        	System.out.println("LoginTest_FAIL");
-	        	SlackTest.Sendmessage("LoginTest_FAIL");
+	        	//SlackTest.Sendmessage("LoginTest_FAIL");
 	        } 
 	        driver.findElement(AppiumBy.accessibilityId("Home")).click();
 	        WebElement el01=driver.findElement(By.xpath("//android.widget.ScrollView"));
@@ -104,10 +105,10 @@ public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
 	    	 System.out.println("CheckOutTest_PASS");
 	    	 System.out.println("UserWokflow_PayOnlineTest_PASS");
 	    	SlackTest.Sendmessage("CheckOutTest                                 PASS");
-		    SlackTest.Sendmessage("PayOnlineTest                                 PASS");
+	    	SlackTest.Sendmessage("PayOnlineTest                                 PASS");
 	        }else{
 	    	System.out.println("CheckOutTest_FAIL");
-	    	SlackTest.Sendmessage("CheckOutTest_FAIL");
+	    	//SlackTest.Sendmessage("CheckOutTest_FAIL");
 	       }
 		}
 	}       

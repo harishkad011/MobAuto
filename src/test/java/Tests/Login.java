@@ -18,6 +18,8 @@ import resources.SlackTest;
 public class Login extends Em_BaseTest{
 	
 	SlackTest slack=new SlackTest();
+	//public AndroidDriver driver;
+	
 	@SneakyThrows
 	@Test
 	public void LoginTest() throws InterruptedException, IOException {
@@ -40,12 +42,12 @@ public class Login extends Em_BaseTest{
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		
 		SlackTest.Sendmessage("*******Kat*******");
-
-	    //driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
-		 driver.findElement(AppiumBy.accessibilityId("Profile")).click();
-		//driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc='Login/Register']")).click();
-		//log.click();
 		
+		Thread.sleep(3000);
+
+		WebElement cl=driver.findElement(AppiumBy.accessibilityId("Profile"));
+cl.click();
+	
 		Thread.sleep(3000);
 		WebElement email = driver.findElement(By.xpath("//android.widget.EditText[@text='Email']"));
         email.click();

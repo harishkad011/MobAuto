@@ -2,15 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="42886" started-at="2022-12-21T17:40:59 IST" finished-at="2022-12-21T17:41:41 IST">
+  <suite name="Surefire suite" duration-ms="38974" started-at="2022-12-22T12:28:59 IST" finished-at="2022-12-22T12:29:38 IST">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="42886" started-at="2022-12-21T17:40:59 IST" finished-at="2022-12-21T17:41:41 IST">
+    <test name="Surefire test" duration-ms="38974" started-at="2022-12-22T12:28:59 IST" finished-at="2022-12-22T12:29:38 IST">
       <class name="Tests.Login">
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Tests.Login@33c7e1bb]" name="LoginTest" duration-ms="42823" started-at="2022-12-21T17:40:59 IST" finished-at="2022-12-21T17:41:41 IST">
+        <test-method status="PASS" signature="Config()[pri:0, instance:Tests.Login@38bc8ab5]" name="Config" is-config="true" duration-ms="18092" started-at="2022-12-22T12:28:59 IST" finished-at="2022-12-22T12:29:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Config -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Tests.Login@38bc8ab5]" name="LoginTest" duration-ms="20340" started-at="2022-12-22T12:29:17 IST" finished-at="2022-12-22T12:29:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Tests.Login@38bc8ab5]" name="tearDown" is-config="true" duration-ms="511" started-at="2022-12-22T12:29:38 IST" finished-at="2022-12-22T12:29:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- Tests.Login -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
