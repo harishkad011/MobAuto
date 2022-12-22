@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
 import lombok.SneakyThrows;
 import resources.Basetest;
 import resources.SlackTest;
@@ -59,6 +60,7 @@ public class Login extends Basetest{
         Assert.assertEquals("Harish QA",logintext );
         if(logintext.equalsIgnoreCase("Harish QA")){
         	System.out.println("Logged in Successfully");
+        	SlackTest.Sendmessage("Logged in Successfully");
         }else {
         	System.out.println("Failed to Login");
         } 

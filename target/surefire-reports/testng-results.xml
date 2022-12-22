@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="38402" started-at="2022-12-22T12:58:00 IST" finished-at="2022-12-22T12:58:39 IST">
+  <suite name="Surefire suite" duration-ms="36237" started-at="2022-12-22T13:18:41 IST" finished-at="2022-12-22T13:19:17 IST">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="38402" started-at="2022-12-22T12:58:00 IST" finished-at="2022-12-22T12:58:39 IST">
+    <test name="Surefire test" duration-ms="36237" started-at="2022-12-22T13:18:41 IST" finished-at="2022-12-22T13:19:17 IST">
       <class name="Tests.Login">
-        <test-method status="PASS" signature="Config()[pri:0, instance:Tests.Login@38bc8ab5]" name="Config" is-config="true" duration-ms="18027" started-at="2022-12-22T12:58:00 IST" finished-at="2022-12-22T12:58:18 IST">
+        <test-method status="PASS" signature="Config()[pri:0, instance:Tests.Login@38bc8ab5]" name="Config" is-config="true" duration-ms="16875" started-at="2022-12-22T13:18:41 IST" finished-at="2022-12-22T13:18:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Config -->
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Tests.Login@38bc8ab5]" name="LoginTest" duration-ms="19808" started-at="2022-12-22T12:58:19 IST" finished-at="2022-12-22T12:58:38 IST">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Tests.Login@38bc8ab5]" name="LoginTest" duration-ms="18823" started-at="2022-12-22T13:18:58 IST" finished-at="2022-12-22T13:19:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Tests.Login@38bc8ab5]" name="teardown" is-config="true" duration-ms="528" started-at="2022-12-22T12:58:38 IST" finished-at="2022-12-22T12:58:39 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Tests.Login@38bc8ab5]" name="teardown" is-config="true" duration-ms="502" started-at="2022-12-22T13:19:17 IST" finished-at="2022-12-22T13:19:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
