@@ -7,14 +7,12 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import lombok.SneakyThrows;
-import resources.BaseUtil;
-import resources.Basetest;
-import resources.SlackTest;
 
-public class Login extends BaseUtil{
+
+public class Login {
 	
-	SlackTest slack=new SlackTest();
-	//public AndroidDriver driver;
+
+	public AndroidDriver driver;
 	
 	@SneakyThrows
 	@Test
@@ -36,8 +34,6 @@ public class Login extends BaseUtil{
 //		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
 //		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-//		
-		SlackTest.Sendmessage("*******Kat*******");
 		
 		Thread.sleep(3000);
 
@@ -61,7 +57,7 @@ public class Login extends BaseUtil{
         Assert.assertEquals("Harish QA",logintext );
         if(logintext.equalsIgnoreCase("Harish QA")){
         	System.out.println("Logged in Successfully");
-        	SlackTest.Sendmessage("Logged in Successfully");
+        	//SlackTest.Sendmessage("Logged in Successfully");
         }else {
         	System.out.println("Failed to Login");
         } 

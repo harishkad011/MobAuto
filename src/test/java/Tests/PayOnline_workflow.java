@@ -1,24 +1,54 @@
 package Tests;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
-import resources.Basetest;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import lombok.SneakyThrows;
 import resources.SlackTest;
 
 
 public class PayOnline_workflow {
 	
 	SlackTest slack=new SlackTest();
+	public AndroidDriver driver;
+	
+	@SneakyThrows
 	@Test
 	public void PayOnlineTest() throws InterruptedException, IOException {
+		
+        DesiredCapabilities cap=new DesiredCapabilities();
+		
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+		
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
+		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
+		//cap.setCapability(MobileCapabilityType.UDID, "72c414f1");
+		cap.setCapability("adbExecTimeout", 50000);
+		cap.setCapability("appWaitforLaunch", false);
+		cap.setCapability("appWaitDuration", 30000);
+		cap.setCapability("uiautomater2ServerInstallTimeout", 60000);
+		cap.setCapability("ignoreHiddenApiPolicyError", true);
+		cap.setCapability("autoGrantPermissions", true);
+		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		
+		
 			 
 		SlackTest.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
 //		driver.findElement(AppiumBy.xpath("//android.widget.Button[@index='0']")).click();
@@ -82,18 +112,20 @@ public class PayOnline_workflow {
         Thread.sleep(3000);
    	    
 //	 	WebElement cupon=driver.findElement(AppiumBy.xpath("//android.view.View[@index='6']"));
-//	    String cuponcode= cupon.getAttribute("content-desc").replaceAll("Get extra 5% off on orders above ₹989", "");
-//   	    System.out.println(cuponcode);    
+//	    String cuponcode= cupon.getAttribute("content-desc");
+//	    		cuponcode.replaceAll("Get extra 5% off on orders above ₹989", "");
+//   	    //System.out.println(cuponcode);    
 //        WebElement tb=driver.findElements(AppiumBy.className("android.widget.EditText")).get(0);
 //        tb.click();
 //        tb.sendKeys(cuponcode);
-//        driver.findElement(AppiumBy.accessibilityId("Apply")).click();
+//        WebElement apply=driver.findElement(AppiumBy.accessibilityId("Apply"));
+//        apply.click();
 //        Thread.sleep(3000);
 //    
 //        System.out.println("ApplyCuponCodeTest_PASS");
 //        SlackTest.Sendmessage("ApplyCuponTest                             PASS");
-//     	
- 	    WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹1309.00"));
+   	
+ 	    WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹969.22"));
  	    paybutton.click();
  	    Thread.sleep(4000);
         String paymentpage=driver.findElement(AppiumBy.xpath("//android.widget.TextView[@index=1]")).getAttribute("text");
