@@ -1,6 +1,5 @@
 Tests\Login.class
 resources\SlackTest.class
-resources\BaseTest.class
-resources\Em_BaseTest.class
+resources\Basetest.class
+Tests\PayOnline_workflow.class
 resources\ExtentReportdemo.class
-Tests\KapivaAppUserWorkflow_PayOnline.class

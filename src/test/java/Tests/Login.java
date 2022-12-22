@@ -1,21 +1,15 @@
 package Tests;
-
-
 import java.io.IOException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
 import lombok.SneakyThrows;
-import resources.Em_BaseTest;
+import resources.Basetest;
 import resources.SlackTest;
 
-public class Login extends Em_BaseTest{
+public class Login extends Basetest{
 	
 	SlackTest slack=new SlackTest();
 	//public AndroidDriver driver;
@@ -46,7 +40,7 @@ public class Login extends Em_BaseTest{
 		Thread.sleep(3000);
 
 		WebElement cl=driver.findElement(AppiumBy.accessibilityId("Profile"));
-cl.click();
+        cl.click();
 	
 		Thread.sleep(3000);
 		WebElement email = driver.findElement(By.xpath("//android.widget.EditText[@text='Email']"));
