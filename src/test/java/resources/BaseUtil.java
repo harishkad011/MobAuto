@@ -12,8 +12,7 @@ import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class Basetest {
-
+public class BaseUtil {
 	public AndroidDriver driver;
 	//public AppiumDriverLocalService service;
 

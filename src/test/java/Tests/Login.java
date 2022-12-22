@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import lombok.SneakyThrows;
+import resources.BaseUtil;
 import resources.Basetest;
 import resources.SlackTest;
 
-public class Login extends Basetest{
+public class Login extends BaseUtil{
 	
 	SlackTest slack=new SlackTest();
 	//public AndroidDriver driver;

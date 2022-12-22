@@ -14,7 +14,7 @@ import resources.Basetest;
 import resources.SlackTest;
 
 
-public class PayOnline_workflow extends Basetest {
+public class PayOnline_workflow {
 	
 	SlackTest slack=new SlackTest();
 	@Test
