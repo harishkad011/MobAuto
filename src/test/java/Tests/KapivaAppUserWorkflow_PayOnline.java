@@ -1,4 +1,4 @@
-package AppWorkflows;
+package Tests;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
@@ -11,12 +11,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
-import resources.BaseTest;
 import resources.Em_BaseTest;
 import resources.SlackTest;
 
 
-public class KapivaAppUserWorkflow_PayOnline extends BaseTest {
+public class KapivaAppUserWorkflow_PayOnline extends Em_BaseTest {
 	
 		SlackTest slack=new SlackTest();
 		

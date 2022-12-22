@@ -62,12 +62,6 @@ public class Em_BaseTest {
 //		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-
-	}
-
-	@AfterClass
-	public void tearDown() {
-
-		driver.quit();
+	
 	}
 }
