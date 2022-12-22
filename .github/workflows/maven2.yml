@@ -1,6 +1,8 @@
 name: Android-Appium
 
 on:
+  schedule:
+    - cron: "0 10,02,06 * * *"
   push:
     branches: [ "main" ]
   pull_request:
