@@ -66,7 +66,7 @@ public class Login {
        
         
         Assert.assertEquals("Harish QA",logintext );
-        if(logintext.equalsIgnoreCase("Harish QA")){
+        if(logintext.equalsIgnoreCase("Harish A")){
         	System.out.println("Logged in Successfully");
         }else {
         	System.out.println("Failed to Login");
