@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,6 +16,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import lombok.SneakyThrows;
@@ -44,11 +47,9 @@ public class PayOnline_workflow {
 		cap.setCapability("ignoreHiddenApiPolicyError", true);
 		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		
-		
 			 
 		SlackTest.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
 		
@@ -80,7 +81,7 @@ public class PayOnline_workflow {
         WebElement el01=driver.findElement(By.xpath("//android.widget.ScrollView"));
         
     	int center_x=el01.getRect().x + (el01.getSize().width/2);
-    	double start_y=el01.getRect().y + (el01.getSize().height*0.9);
+    	double start_y=el01.getRect().y + (el01.getSize().height*0.7);
     	double end_y=el01.getRect().y + (el01.getSize().height*0.1);
     	PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
     	Sequence swipe=new Sequence(finger, 1);
@@ -99,7 +100,7 @@ public class PayOnline_workflow {
         Thread.sleep(3000);
     	WebElement el04=driver.findElement(By.xpath("//android.view.View"));
     	int center_x1=el04.getRect().x + (el04.getSize().width/2);
-    	double start_y1=el04.getRect().y + (el04.getSize().height*0.7);
+    	double start_y1=el04.getRect().y + (el04.getSize().height*0.6);
     	double end_y1=el04.getRect().y + (el04.getSize().height*0.1);
     	PointerInput finger2=new PointerInput(PointerInput.Kind.TOUCH,"finger2");
     	
@@ -111,25 +112,32 @@ public class PayOnline_workflow {
    	    driver.perform(Arrays.asList(swipe2));
         Thread.sleep(3000);
    	    
-//	 	WebElement cupon=driver.findElement(AppiumBy.xpath("//android.view.View[@index='6']"));
+	 	WebElement cupon=driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"SAVE5\nGet extra 5% off on orders above ₹989\"]"));
+	 	cupon.click();
 //	    String cuponcode= cupon.getAttribute("content-desc");
-//	    		cuponcode.replaceAll("Get extra 5% off on orders above ₹989", "");
-//   	    //System.out.println(cuponcode);    
+//	    		cuponcode.replaceAll("Get extra 5% off on orders above ₹988", "");
+//   	    System.out.println(cuponcode);    
 //        WebElement tb=driver.findElements(AppiumBy.className("android.widget.EditText")).get(0);
 //        tb.click();
 //        tb.sendKeys(cuponcode);
+//        Thread.sleep(3000);
 //        WebElement apply=driver.findElement(AppiumBy.accessibilityId("Apply"));
 //        apply.click();
-//        Thread.sleep(3000);
-//    
-//        System.out.println("ApplyCuponCodeTest_PASS");
-//        SlackTest.Sendmessage("ApplyCuponTest                             PASS");
+        Thread.sleep(4000);
+    
+        System.out.println("ApplyCuponCodeTest_PASS");
+        SlackTest.Sendmessage("ApplyCuponTest                             PASS");
    	
- 	    WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹969.22"));
- 	    paybutton.click();
+     // WebElement paybutton = driver.findElements(By.className("android.view.View")).get(2);
+      WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹893.00"));
+                  paybutton.click();
+        //for(WebElement button : paybutton){
+        //System.out.println(paybutton.get(2).getText());
+       // }
+ 	    //paybutton.click();
  	    Thread.sleep(4000);
         String paymentpage=driver.findElement(AppiumBy.xpath("//android.widget.TextView[@index=1]")).getAttribute("text");
-        Assert.assertEquals("Payment Methods", paymentpage);
+        Assert.assertEquals(paymentpage,"Payment Methods");
         if(paymentpage.contains("Payment Methods")) {
     	 System.out.println("CheckOutTest_PASS");
     	 System.out.println("UserWokflow_PayOnlineTest_PASS");
