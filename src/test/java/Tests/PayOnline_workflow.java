@@ -63,7 +63,8 @@ public class PayOnline_workflow {
 	    Thread.sleep(1000);
 	    WebElement password =driver.findElement(By.xpath("//android.widget.ImageView[@index='2']"));
 	    password.click();
-	    password.sendKeys("Kapiva@123"); 	
+	    password.sendKeys("Kapiva@123"); 
+	    
 	    driver.hideKeyboard();
 	    driver.findElement(By.xpath("//android.widget.Button[@content-desc='Login']")).click();
 	    driver.findElement(AppiumBy.accessibilityId("Profile")).click();
@@ -78,22 +79,36 @@ public class PayOnline_workflow {
         	//SlackTest.Sendmessage("LoginTest_FAIL");
         } 
         driver.findElement(AppiumBy.accessibilityId("Home")).click();
-        WebElement el01=driver.findElement(By.xpath("//android.widget.ScrollView"));
         
-    	int center_x=el01.getRect().x + (el01.getSize().width/2);
-    	double start_y=el01.getRect().y + (el01.getSize().height*0.7);
-    	double end_y=el01.getRect().y + (el01.getSize().height*0.1);
-    	PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
-    	Sequence swipe=new Sequence(finger, 1);
-    	
-    	swipe.addAction(finger.createPointerMove(Duration.ofSeconds(0), PointerInput.Origin.viewport(), center_x, (int)start_y));
-    	swipe.addAction(finger.createPointerDown(0));
-    	swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), center_x, (int)end_y));
-    	swipe.addAction(finger.createPointerUp(0));
-    	driver.perform(Arrays.asList(swipe));
+//        WebElement el01=driver.findElement(By.xpath("//android.widget.ScrollView"));
+//        
+//    	int center_x=el01.getRect().x + (el01.getSize().width/2);
+//    	double start_y=el01.getRect().y + (el01.getSize().height*0.7);
+//    	double end_y=el01.getRect().y + (el01.getSize().height*0.1);
+//    	PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
+//    	Sequence swipe=new Sequence(finger, 1);
+//    	
+//    	swipe.addAction(finger.createPointerMove(Duration.ofSeconds(0), PointerInput.Origin.viewport(), center_x, (int)start_y));
+//    	swipe.addAction(finger.createPointerDown(0));
+//    	swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), center_x, (int)end_y));
+//    	swipe.addAction(finger.createPointerUp(0));
+//    	driver.perform(Arrays.asList(swipe));
+        
     	Thread.sleep(2000);
-        driver.findElement(AppiumBy.xpath("(//android.widget.Button[@content-desc=\"BUY NOW\"])[1]")).click();
+        driver.findElement(AppiumBy.xpath("//android.widget.Button[@index=\"2\"]")).click();
         
+       WebElement search = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@index=\"1\"]"));
+       search.sendKeys("GetSlim juice");
+       driver.hideKeyboard();
+       
+       
+       
+       driver.findElement(AppiumBy.xpath("//android.widget.ImageView[@index=\"3\"]")).click();
+       
+       Thread.sleep(4000);
+       driver.findElement(AppiumBy.accessibilityId("BUY NOW")).click();
+        
+        Thread.sleep(3000);
         System.out.println("BuyNowTest_PASS");
         SlackTest.Sendmessage("BuyNowTest                                   PASS");
         
