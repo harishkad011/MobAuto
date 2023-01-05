@@ -53,9 +53,9 @@ public class PayOnline_workflow {
 			 
 		SlackTest.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
 		
-		WebElement pr=driver.findElement(AppiumBy.accessibilityId("Profile"));
-		pr.click();
-		Thread.sleep(1000);
+		driver.findElement(AppiumBy.accessibilityId("Profile")).click();
+	
+		Thread.sleep(3000);
 		WebElement email = driver.findElement(By.xpath("//android.widget.EditText[@text='Email']"));
                    email.click();
 		           email.sendKeys("harish.hj@kapiva.in");
