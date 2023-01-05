@@ -125,7 +125,7 @@ public class PayOnline_workflow {
     	swipe2.addAction(finger2.createPointerMove(Duration.ofMillis(400), PointerInput.Origin.viewport(), center_x1, (int)end_y1));
     	swipe2.addAction(finger2.createPointerUp(0));
    	    driver.perform(Arrays.asList(swipe2));
-        Thread.sleep(3000);
+        Thread.sleep(4000);
    	    
 	 	driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"SAVE5\nGet extra 5% off on orders"
 	 			+ " above ₹989\"]")).click();
