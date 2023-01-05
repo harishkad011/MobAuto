@@ -127,8 +127,9 @@ public class PayOnline_workflow {
    	    driver.perform(Arrays.asList(swipe2));
         Thread.sleep(3000);
    	    
-	 	WebElement cupon=driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"SAVE5\nGet extra 5% off on orders above ₹989\"]"));
-	 	cupon.click();
+	 	driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"SAVE5\nGet extra 5% off on orders"
+	 			+ " above ₹989\"]")).click();
+	 	
 //	    String cuponcode= cupon.getAttribute("content-desc");
 //	    		cuponcode.replaceAll("Get extra 5% off on orders above ₹988", "");
 //   	    System.out.println(cuponcode);    
