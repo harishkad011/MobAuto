@@ -15,18 +15,21 @@ import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import Res.Slacky;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import lombok.SneakyThrows;
-import resources.SlackTest;
+
 
 
 public class PayOnline_workflow {
 	
-	SlackTest slack=new SlackTest();
+	Slacky slack=new Slacky();
+	
 	public AndroidDriver driver;
 	
 	@SneakyThrows
@@ -51,7 +54,7 @@ public class PayOnline_workflow {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 			 
-		SlackTest.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
+		Slacky.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
 		
 		driver.findElement(AppiumBy.accessibilityId("Profile")).click();
 	
@@ -72,7 +75,7 @@ public class PayOnline_workflow {
         if(logintext.equalsIgnoreCase("Harish QA")){
         	System.out.println("LoginTest_PASS");
       
-        SlackTest.Sendmessage("LoginTest                                         PASS");
+        	Slacky.Sendmessage("LoginTest                                         PASS");
      
         }else {
         	System.out.println("LoginTest_FAIL");
@@ -110,7 +113,7 @@ public class PayOnline_workflow {
         
         Thread.sleep(3000);
         System.out.println("BuyNowTest_PASS");
-        SlackTest.Sendmessage("BuyNowTest                                   PASS");
+        Slacky.Sendmessage("BuyNowTest                                   PASS");
         
         Thread.sleep(3000);
     	WebElement el04=driver.findElement(By.xpath("//android.view.View"));
@@ -142,7 +145,7 @@ public class PayOnline_workflow {
         Thread.sleep(4000);
     
         System.out.println("ApplyCuponCodeTest_PASS");
-        SlackTest.Sendmessage("ApplyCuponTest                             PASS");
+        Slacky.Sendmessage("ApplyCuponTest                             PASS");
    	
      // WebElement paybutton = driver.findElements(By.className("android.view.View")).get(2);
       WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹893.00"));
@@ -150,15 +153,15 @@ public class PayOnline_workflow {
         //for(WebElement button : paybutton){
         //System.out.println(paybutton.get(2).getText());
        // }
- 	    //paybutton.click();
+ 	    //paybutton.click();w 0..
  	    Thread.sleep(4000);
         String paymentpage=driver.findElement(AppiumBy.xpath("//android.widget.TextView[@index=1]")).getAttribute("text");
         Assert.assertEquals(paymentpage,"Payment Methods");
         if(paymentpage.contains("Payment Methods")) {
     	 System.out.println("CheckOutTest_PASS");
     	 System.out.println("UserWokflow_PayOnlineTest_PASS");
-    	SlackTest.Sendmessage("CheckOutTest                                 PASS");
-    	SlackTest.Sendmessage("PayOnlineTest                                 PASS");
+    	 Slacky.Sendmessage("CheckOutTest                                 PASS");
+    	 Slacky.Sendmessage("PayOnlineTest                                 PASS");
         }else{
     	System.out.println("CheckOutTest_FAIL");}
     	//SlackTest.Sendmessage("CheckOutTest_FAIL");}

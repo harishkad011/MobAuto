@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Tests.PayOnline_workflow
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 78.795 s <<< FAILURE! - in Tests.PayOnline_workflow
-PayOnlineTest(Tests.PayOnline_workflow)  Time elapsed: 78.177 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.0', revision: '0a5b49d16f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [beab5a67-f9ba-468a-977c-35be432ef44f, findElement {using=xpath, value=//android.widget.TextView[@index=1]}]
-Capabilities {appium:adbExecTimeout: 50000, appium:app: D:\Automation\KapivaMobileA..., appium:appPackage: com.kapiva.app, appium:appWaitDuration: 30000, appium:appWaitforLaunch: false, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 50000, app: D:\Automation\KapivaMobileA..., appWaitDuration: 30000, appWaitforLaunch: false, autoGrantPermissions: true, automationName: UiAutomator2, ignoreHiddenApiPolicyError: true, platformName: android, uiautomater2ServerInstallTimeout: 60000}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 220333QBI, appium:deviceName: 72c414f1, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1650, appium:deviceUDID: 72c414f1, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 12, appium:statBarHeight: 49, appium:takesScreenshot: true, appium:uiautomater2ServerInstallTimeout: 60000, appium:viewportRect: {height: 1458, left: 0, top: 49, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: beab5a67-f9ba-468a-977c-35be432ef44f
-	at Tests.PayOnline_workflow.PayOnlineTest(PayOnline_workflow.java:137)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 82.06 s - in Tests.PayOnline_workflow

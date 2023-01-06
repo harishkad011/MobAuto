@@ -1,16 +1,16 @@
-package resources;
+package Res;
 
 import java.io.IOException;
-
-import org.testng.annotations.Test;
 
 import com.github.seratch.jslack.Slack;
 import com.github.seratch.jslack.api.webhook.Payload;
 import com.github.seratch.jslack.api.webhook.WebhookResponse;
+import org.testng.annotations.Test;
+import lombok.SneakyThrows;
 
 
-	public class SlackTest {
-		
+public class Slacky {
+
 		//private static String webhooksurl="https://hooks.slack.com/services/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";
 		private static String webhooksurl="https://hooks.slack.com/services/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";
 		
@@ -18,6 +18,7 @@ import com.github.seratch.jslack.api.webhook.WebhookResponse;
 		//private static String slackchannel="qa_automation_results";
 		private static String slackchannel="demo";
 
+		@SneakyThrows
 		@Test
 		public static String Sendmessage(String message) throws IOException {
 
