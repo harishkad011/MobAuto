@@ -142,12 +142,11 @@ public class PayOnline_workflow {
 //        Thread.sleep(3000);
 //        WebElement apply=driver.findElement(AppiumBy.accessibilityId("Apply"));
 //        apply.click();
-        Thread.sleep(4000);
+        Thread.sleep(6000);
     
         System.out.println("ApplyCuponCodeTest_PASS");
         Slacky.Sendmessage("ApplyCuponTest                             PASS");
    	
-     // WebElement paybutton = driver.findElements(By.className("android.view.View")).get(2);
       WebElement paybutton =driver.findElement(AppiumBy.accessibilityId("Pay ₹893.00"));
                   paybutton.click();
         //for(WebElement button : paybutton){
