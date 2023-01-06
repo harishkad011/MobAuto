@@ -51,7 +51,7 @@ public class PayOnline_workflow {
 		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
 		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 			 
 		Slacky.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
