@@ -1,5 +1,6 @@
 package Tests;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +20,7 @@ public class AppLogin {
 	public AndroidDriver driver;
 	
 	@Test
-	public void AppLoginTest() throws InterruptedException {
+	public void AppLoginTest() throws InterruptedException, MalformedURLException {
 		
 		DesiredCapabilities cap=new DesiredCapabilities();
 		
