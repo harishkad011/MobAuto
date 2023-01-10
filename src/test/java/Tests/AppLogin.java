@@ -17,7 +17,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class AppLogin {
 	
-	public AndroidDriver driver;
+	private AndroidDriver driver;
 	
 	@Test
 	public void AppLoginTest() throws InterruptedException, MalformedURLException {
