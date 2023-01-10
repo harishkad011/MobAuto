@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="81017" started-at="2023-01-06T11:36:37 IST" finished-at="2023-01-06T11:37:58 IST">
+  <suite name="Surefire suite" duration-ms="34212" started-at="2023-01-10T13:22:23 IST" finished-at="2023-01-10T13:22:57 IST">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="81017" started-at="2023-01-06T11:36:37 IST" finished-at="2023-01-06T11:37:58 IST">
-      <class name="Tests.PayOnline_workflow">
-        <test-method status="PASS" signature="PayOnlineTest()[pri:0, instance:Tests.PayOnline_workflow@52feb982]" name="PayOnlineTest" duration-ms="80971" started-at="2023-01-06T11:36:37 IST" finished-at="2023-01-06T11:37:58 IST">
+    <test name="Surefire test" duration-ms="34212" started-at="2023-01-10T13:22:23 IST" finished-at="2023-01-10T13:22:57 IST">
+      <class name="Tests.AppLogin">
+        <test-method status="PASS" signature="Config()[pri:0, instance:Tests.AppLogin@38bc8ab5]" name="Config" is-config="true" duration-ms="16340" started-at="2023-01-10T13:22:23 IST" finished-at="2023-01-10T13:22:39 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PayOnlineTest -->
-      </class> <!-- Tests.PayOnline_workflow -->
+        </test-method> <!-- Config -->
+        <test-method status="PASS" signature="AppLoginTest()[pri:0, instance:Tests.AppLogin@38bc8ab5]" name="AppLoginTest" duration-ms="17290" started-at="2023-01-10T13:22:39 IST" finished-at="2023-01-10T13:22:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppLoginTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:Tests.AppLogin@38bc8ab5]" name="TearDown" is-config="true" duration-ms="508" started-at="2023-01-10T13:22:57 IST" finished-at="2023-01-10T13:22:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- Tests.AppLogin -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

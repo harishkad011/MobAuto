@@ -16,6 +16,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Res.BaseTest;
 import Res.Slacky;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
@@ -26,7 +27,7 @@ import lombok.SneakyThrows;
 
 
 
-public class PayOnline_workflow {
+public class PayOnline_workflow extends BaseTest {
 	
 	Slacky slack=new Slacky();
 	
@@ -36,24 +37,8 @@ public class PayOnline_workflow {
 	@Test
 	public void PayOnlineTest() throws InterruptedException, IOException {
 		
-        DesiredCapabilities cap=new DesiredCapabilities();
-		
-		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-		
-		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel");
-		//cap.setCapability(MobileCapabilityType.UDID, "72c414f1");
-		cap.setCapability("adbExecTimeout", 50000);
-		cap.setCapability("appWaitforLaunch", false);
-		cap.setCapability("appWaitDuration", 30000);
-		cap.setCapability("uiautomater2ServerInstallTimeout", 60000);
-		cap.setCapability("ignoreHiddenApiPolicyError", true);
-		cap.setCapability("autoGrantPermissions", true);
-		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
-		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        
 
-			 
 		Slacky.Sendmessage("*******KapivaAppUserWorkflow_PayOnlineTest*******");
 		
 		driver.findElement(AppiumBy.accessibilityId("Profile")).click();
