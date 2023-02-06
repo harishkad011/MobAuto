@@ -1,40 +1,18 @@
 package Tests;
 
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 import Res.BaseTest;
 import Res.Slacky;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
 
-public class AppLogin {
-	
-	private AndroidDriver driver;
+public class AppLogin extends BaseTest {
 	
 	@Test
 	public void AppLoginTest() throws InterruptedException, MalformedURLException {
 		
-		DesiredCapabilities cap=new DesiredCapabilities();
-		
-		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-		cap.setCapability("adbExecTimeout", 50000);
-		cap.setCapability("appWaitforLaunch", false);
-		cap.setCapability("appWaitDuration", 30000);
-		cap.setCapability("uiautomater2ServerInstallTimeout", 60000);
-		cap.setCapability("ignoreHiddenApiPolicyError", true);
-		cap.setCapability("autoGrantPermissions", true);
-		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/App/app-release.apk");
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	driver.findElement(AppiumBy.accessibilityId("Profile")).click();
 	
@@ -56,7 +34,6 @@ public class AppLogin {
     	System.out.println("LoginTest_PASS");
   
     	//Slacky.Sendmessage("LoginTest                                         PASS");
- 
     }else {
     	System.out.println("LoginTest_FAIL");
     	//SlackTest.Sendmessage("LoginTest_FAIL");

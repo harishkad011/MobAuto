@@ -68,19 +68,19 @@ public class PayOnline_workflow extends BaseTest {
         } 
         driver.findElement(AppiumBy.accessibilityId("Home")).click();
         
-//        WebElement el01=driver.findElement(By.xpath("//android.widget.ScrollView"));
-//        
-//    	int center_x=el01.getRect().x + (el01.getSize().width/2);
-//    	double start_y=el01.getRect().y + (el01.getSize().height*0.7);
-//    	double end_y=el01.getRect().y + (el01.getSize().height*0.1);
-//    	PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
-//    	Sequence swipe=new Sequence(finger, 1);
-//    	
-//    	swipe.addAction(finger.createPointerMove(Duration.ofSeconds(0), PointerInput.Origin.viewport(), center_x, (int)start_y));
-//    	swipe.addAction(finger.createPointerDown(0));
-//    	swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), center_x, (int)end_y));
-//    	swipe.addAction(finger.createPointerUp(0));
-//    	driver.perform(Arrays.asList(swipe));
+       WebElement el01=driver.findElement(By.xpath("//android.widget.ScrollView"));
+        
+    	int center_x=el01.getRect().x + (el01.getSize().width/2);
+    	double start_y=el01.getRect().y + (el01.getSize().height*0.7);
+    	double end_y=el01.getRect().y + (el01.getSize().height*0.1);
+    	PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
+    	Sequence swipe=new Sequence(finger, 1);
+    	
+    	swipe.addAction(finger.createPointerMove(Duration.ofSeconds(0), PointerInput.Origin.viewport(), center_x, (int)start_y));
+    	swipe.addAction(finger.createPointerDown(0));
+    	swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), center_x, (int)end_y));
+    	swipe.addAction(finger.createPointerUp(0));
+    	driver.perform(Arrays.asList(swipe));
         
     	Thread.sleep(2000);
         driver.findElement(AppiumBy.xpath("//android.widget.Button[@index=\"2\"]")).click();
